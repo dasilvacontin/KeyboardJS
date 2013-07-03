@@ -10,5 +10,5 @@ var preventer = function (evt) {
 };
 var keyboard = new KeyboardJS(debug, preventer);
 
-if (keyboard.keysASCII['W']) moveForward();
-```
+if (keyboard.keysCHAR['W']) moveForward();
+``
