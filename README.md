@@ -10,5 +10,10 @@ var preventer = function (evt) {
 };
 var keyboard = new KeyboardJS(debug, preventer);
 
-if (keyboard.keysCHAR['W']) moveForward();
+// check key with 'keyboard.keys[asciivalue]' or with 'keyboard.char(character)'
+// characters must be uppercase!
+
+if (keyboard.char('W')) moveForward();
+// is the same as
+if (keyboard.keys[75]) moveForward();
 ```
