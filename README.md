@@ -1,19 +1,32 @@
 KeyboardJS
 ==========
 
-Simple keyboard event handler.
+A simple keyboard utility for the browser.
 
 ```javascript
-var debug = true;
-var preventer = function (evt) {
-	if (condition) evt.preventDefault();
-};
-var keyboard = new KeyboardJS(debug, preventer);
+const kbd = require('@dasilvacontin/keyboard')
+kbd.debug = true
 
-// check key with 'keyboard.keys[asciivalue]' or with 'keyboard.char(character)'
-// characters must be uppercase!
-
-if (keyboard.char('W')) moveForward();
-// is the same as
-if (keyboard.keys[75]) moveForward();
+// any of these work
+if (kbd.isKeyDown(32)) jump()
+if (kbd.isKeyDown(kbd.SPACE_BAR)) jump()
+if (kbd.isKeyDown(' ')) jump()
 ```
+
+Available constants:
+```js
+var keyCodes = {
+  SPACE_BAR: 32,
+
+  LEFT_ARROW: 37,
+  UP_ARROW: 38,
+  RIGHT_ARROW: 39,
+  DOWN_ARROW: 40
+}
+```
+
+## License
+
+MIT © [David da Silva]
+
+[David da Silva]: http://dasilvacont.in
