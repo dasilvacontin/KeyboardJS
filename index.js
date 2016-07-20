@@ -15,10 +15,10 @@ for (var keyName in keyCodes) {
 }
 
 exports.isKeyDown = function (keyCode) {
-  if (typeof keyCode === 'number') return keys[keyCode]
+  if (typeof keyCode === 'number') return Boolean(keys[keyCode])
   if (typeof keyCode === 'string' && keyCode.length === 1) {
     var letter = keyCode.toUpperCase()
-    return keys[letter.charCodeAt(0)]
+    return Boolean(keys[letter.charCodeAt(0)])
   }
   throw new TypeError('Expected keyCode or single letter string')
 }
