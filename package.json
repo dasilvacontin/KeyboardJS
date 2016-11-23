@@ -1,6 +1,6 @@
 {
   "name": "@dasilvacontin/keyboard",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple keyboard utility for the browser.",
   "main": "index.js",
   "scripts": {
