@@ -20,7 +20,9 @@ exports.isKeyDown = function (keyCode) {
     var letter = keyCode.toUpperCase()
     return Boolean(keys[letter.charCodeAt(0)])
   }
-  throw new TypeError('Expected keyCode or single letter string')
+  throw new TypeError(
+    '`isKeyDown` expected keyCode (`number`) or character. Got ' + keyCode + '.'
+  )
 }
 
 document.addEventListener('keydown', function (e) {
